@@ -1,0 +1,28 @@
+{
+  "name": "constructor_hangman",
+  "version": "1.0.0",
+  "description": "hangman command line game",
+  "main": "hangman.js",
+  "scripts": {
+    "start": "node hangman.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yealemiyelij/Constructor-Hangman.git"
+  },
+  "keywords": [
+    "hangman"
+  ],
+  "author": "Wondu Mamo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yealemiyelij/Constructor-Hangman/issues"
+  },
+  "homepage": "https://github.com/yealemiyelij/Constructor-Hangman#readme",
+  "dependencies": {
+    "inquirer": "^3.3.0",
+    "is-letter": "^1.1.1"
+  },
+  "devDependencies": {}
+}
