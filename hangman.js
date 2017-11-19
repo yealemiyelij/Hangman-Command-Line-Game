@@ -2,11 +2,19 @@ var inquirer = require('inquirer');
 var isLetter = require('is-letter');
 var Word = require('./words.js');
 var Game = require('./game.js');
+var clear = require('clear');
+// const readline = require('readline');
+
 //hangman picture
 var hangManDisplay = Game.newWord.hangman;
 
 require('events').EventEmitter.prototype._maxListeners = 100;
 console.log("The Hangman Game is dedicated to predict the 'Name of clubs' which are known in English Preimer League!");
+
+// the clear () used to clear the repeated flow of results and consolidates in one line
+// console.log("cleartop");
+// clear();
+// console.log("cleartop");
 
 
 var hangman = {
@@ -33,6 +41,8 @@ var hangman = {
 			}
 		})
 	},
+
+
 	//starts new game.
 	newGame: function () {
 		if (this.guessesRemaining === 10) {
@@ -115,18 +125,14 @@ var hangman = {
 			}
 		});
 	},
-	// resetGame: function () {
-	// 	if (this.guessesRemaining & this.guessedLetters === o) {
-	// 		console.log("Okay: ");
-	// 		this.startGame();
-	// 	} else {
-	// 		console.log("thank, close and try another time.");
-	// 	}
-	// }
 
-	// newOrReset: function () {
-	// 	this.newGame();
-	// }
 }
+
+// setTimeout(() => {
+// 	readline.cursorTo(process.stdout, 0, 0);
+// 	readline.clearScreenDown(process.stdout);
+// 	// console.log('THIS SHOULD OVERWRITE WHAT WAS ON THE SCREEN BEFORE.');
+// }, 2000);
+
 
 hangman.startGame();
